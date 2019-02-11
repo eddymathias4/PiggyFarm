@@ -1,0 +1,218 @@
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.closew:hover,
+.closew:focus {
+  box-shadow: inset -4.28em 0 0 0 var(--hover), inset 4.28em 0 0 0 var(--hover);
+}
+
+.closer:hover,
+.closer:focus {
+  box-shadow: inset -4.28em 0 0 0 var(--hover), inset 4.28em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.down:hover,
+.down:hover:focus {
+  box-shadow: inset 0 3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #00478a;
+  --hover: #3771b4;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.closer {
+  --color: #008a7e;
+  --hover: #008a7e;
+}
+
+.closew {
+  --color: #af4000;
+  --hover: #f16508;
+}
+
+.closer {
+  --color: #003f63;
+  --hover: #007db8;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+.up {
+  --color: #03610b;
+  --hover: #18a506;
+}
+
+.down {
+  --color: #5a5a5a;
+  --hover: #8a0000;
+}
+
+.slide {
+  --color: #780083;
+  --hover: #8f00e2;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 1em;
+  padding: .6em 1em;
+  border-radius: 5px;
+  /*box-shadow: .5px .5px 10px #003f63;*/
+}
+
+h1 {
+  font-weight: 400;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+
+/* my menu */
+
+
+
+ul {
+  background: #fff;
+ /* margin: 20px; */
+  position: sticky;
+  overflow: hidden;
+ /*  margin-left: 28%;*/
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+}
+
+ul li {
+  list-style: none;
+  text-transform: uppercase;
+  float: left;
+  margin: 0 10px;
+  padding: 0 5px 5px;
+}
+ul li a {
+  color: #000;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  color: rgb(194, 16, 16);
+}
+
+hr.gradient {
+  height: 1px;
+  border: 0;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #e1e1e1, rgb(155, 0, 0), #e1e1e1);
+  background-image: -moz-linear-gradient(left, #e1e1e1, rgb(155, 0, 0), #e1e1e1);
+  background-image: -ms-linear-gradient(left, #e1e1e1, rgb(155, 0, 0), #e1e1e1);
+  background-image: -o-linear-gradient(left, #e1e1e1, rgb(155, 0, 0), #e1e1e1);
+}
+
+hr.double {
+  border:none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #9e0101;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px; 
+}
+
+#fbox {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 5px;
+  font-size: 20px;
+  z-index: 2;
+  box-shadow: 1px 1px 5px rgb(68, 68, 68);
+
+}

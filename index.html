@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>one-eight.io</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/onestyle.css">
+      <link rel="stylesheet" href="css/buttons.css">
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/stylehead.css">
+      <link rel="stylesheet" href="css/slideshow.css">
+      <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='https://fonts.googleapis.com/css?family=Exo:200&subset=latin' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Exo:600&subset=latin' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <html>
+      <div id="google_translate_element"></div><script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+        }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   <section id="bannertop">
+      <A NAME="top"></A>
+              <h1 class="funk">tron.one-eight.io</h1>
+
+          <p class="headp">1.8% daily ETH rewards | immutable smart contract | participate and earn</p>
+          <img class="oneeight" src="images/borun.png" width=110px> 
+  </section>
+
+
+ <div id="fbox"> 
+   
+        <ul>
+            <li><a href="#top" class="toptop">one-eight.io</a></li>
+            <li><a href="#getstarted" class="home">Get Started</a></li>
+            <li><a href="#dash" class="about">Dashboard</a></li>
+            <li><a href="#swag" class="products">Get Swag</a></li>           
+            <li><a href="#FAQ" class="contact">FAQ</a></li>
+        </ul>
+    
+</div>
+
+
+<section id="contentx">
+     
+    <div class="grid-layout /*grid-layout--no-margin*/ /*grid-layout--fluid*/ /*grid-layout--no-gutters*/ colour--1"> 
+      <h2>Storytime...</h2>
+      <div class="medium--4 large--4">
+        <img class="icn" src="images/animat-linechart.gif" width="100px">
+          <h3>Low Yielding Percentage</h3>
+          <p>1.8% is the ideal percentage that is realistic and will help the contract to grow slow and steady overtime. Any Percentage that is higher is more risky. One-Eight is created for longevity and the dedicated player who would like to minimize risk.</p> 
+      </div>
+      <div class="medium--4 large--4">
+          <img class="icn" src="images/animat-lightbulb.gif" width="100px">
+          <h3>Smart Contract</h3>
+          <p>the One-Eight smart contract is automatic. No humans, immutable and trustless. It is built on the Ethereum blockchain which is secure. 
+          A truly decentralized way to earn Ethereum everyday.  </p>
+      </div>
+      <div class="medium--4 large--4">
+          <img class="icn" src="images/animat-diamond.gif" width="100px">
+        <h3>Contributors Fund </h3>
+        <p>Your contribution to this fund is what keeps the smart contract active. As more and more players contribute to the fund it grows and the platform becomes more secure. The Contributors fund is also backed by our sponsors. This gives it an added safety net of outside funds. </p>
+      </div>
+      <div class="medium--4 large--4">
+          <h3>How to Play</h3>
+        <p>To play make sure you first have Nifty wallet or Trust Wallet on mobile set-up. Then you simply contribute the amount of Ether you want to the contributors fund.
+        By contributing to the fund you become a part of the project forever.
+        You will begin to earn 1.8% ETHH everyday based on your contribution. </p>
+        <p>You can take out your Ether or re-contribute your earnings.<br> 
+        </p>
+      </div>
+      <div class="medium--4 large--4">
+          <h3>Be a PAL Share</h3>
+          <p>Earn more when you invite friends to join.  You will receive a 2.5% commission of their contribution when they use your PAL. </p>
+      </div>
+      <div class="medium--4 large--4">
+          <div id="oneeightfun_hype_container" style="margin:auto;position:relative;width:170px;height:275px;overflow:hidden;">
+              <script type="text/javascript" charset="utf-8" src="oneeightfun.hyperesources/oneeightfun_hype_generated_script.js?80968"></script>
+          </div>
+      </div>
+    </div>
+</section>  
+    <!-- break to Player Dash Board-->
+
+    <br>
+    <br>
+  <section id="bannerx">
+      <h3>Contribution Fund</h3>
+      <p id="contract-balance" class="contract-balance bigger-text">Not Connected...</p>
+      <!-- <h5 id="contract-balance-usd" class="contract-balance bigger-text">Undefined_1</h5> -->
+  </section>
+  
+<section id="contentx">
+    <A NAME="dash"></A>
+    <h2>Participant Dashboard</h2> 
+    <div class="grid-layout colour--2">
+      <div class="small--6 medium--6 large--3">
+        	<center>
+              <h4>Give to the Contributors Fund</h4>
+            <h6>Minimum to enter contract is .05 ETH <br>
+              the community appreciates your contribution.<br>
+              Your contribution keeps one-eight active. 
+            </h6>
+            <input type="text" style="width:70%;" placeholder="Enter ETH to Contribute" id="investAmount"></input>
+            <br> <br>
+            <button class="up" onclick="investETH(sent)">Contribute NOW</button><BR>
+            <br> 
+            <h4>Your Active Contribution</h4>
+            <font size="5"><span id="activeInvestment">0 <B>ETH</B></span></font>  
+              </center>
+      </div>
+      <div class="small--6 medium--6 large--3">
+        	<center>
+              <!-- <h4>Your Dividends</h4> -->
+              <h4>Your Daily ETH Reward</h4>
+               <font size="5"><span id="activeProfit">0 <B>ETH</B></span></font>
+                    </font>
+                    <br><br>
+                    <button class="closew" onclick="withdrawProfit(sent)">Withdraw</button>
+                    <button class="closer" onclick="reinvestProfit(sent)">re-Contribute</button>
+            <br><br>
+                    <h5>You can withdraw or re-contribute your earnings any time.</h5>
+                    
+                    <h6>The contribution fund is depenedent on its contributors. If the contribution fund is depleted the project cannot give to its contributors. The recommended growth strategy for the project is to re-contibute and HODL 30 days than withdraw half and re-contribute half till your ROI is covered.
+                      
+                    </h6>
+            </center>
+      </div>
+
+      <div class="small--6 medium--6 large--3">
+
+          <h4>Share your PAL (Partner Affiliate Link)</h4>
+          <h5> by sharing your PAL with a pal you will earn 2.5% Appreciation Reward on their contribution.</h5>
+          <h6>IF you do not see your referral link make sure your Nifty Mask is connected or clear cache and refresh web browser.</h6>
+          <span id="reflink">-</span>
+          <br>
+          <center>
+            <h4><i>share your PAL</i></h4>
+          <br>
+           <font size="5"><span id="activeCommision">0 <B>ETH</B></span></font>
+           <br>
+          <h6>Your PAL BONUS may take a moment to update. If you do not see your PAL link please clear your cache and refresh page.</h6>
+          <button class ="slide" onclick="withdrawAffiliateCommision(sent)">Withdraw PAL</button>
+          </center>
+      </div>
+
+      <div class="small--6 medium--6 large--3">
+          <h3>Status Details</h3>
+          <h5>Check contract health and details. Transactions will open up in ethplorer.io and Smart Contract opens on Etherscan.</h5>
+          <button class="down" onclick="getstats()">Transactions</button>
+
+          <button class="down" onclick="opencontract()">Smart Contract</button>
+          
+          <br>
+          <h6>Clicking above will open new window. This page will remain open.</h6>
+        
+
+      </div>
+
+      
+    </div>
+   <hr class="double">
+ </section> 
+ <section id="contentx">
+     
+    <div class="grid-layout /*grid-layout--no-margin*/ /*grid-layout--fluid*/ /*grid-layout--no-gutters*/ colour--1"> 
+      <A NAME="getstarted"></A>
+      <h2>Get Started</h2>
+      <p>Getting started is simple. First set up Nifty Wallet or Trust Wallet. After you have set-up your wallet, you can use Changelly to purchase ETH with a credit card or use CoinsSwitch to convert any ALT coint to ETH. Simple. </p>
+      <div class="medium--4 large--4">
+          <script type="text/javascript">
+            function open_widget(a, e) {
+                e.preventDefault();
+                var link = a.href;
+                window.open(link, 'Changelly', 'width=600,height=470,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0');
+                return false;
+            }
+          </script>
+          <a onclick="open_widget(this, event);" href="https://changelly.com/widget/v1?auth=email&from=USD&to=ETH&merchant_id=39d460387ce1&address=&amount=100&ref_id=39d460387ce1&color=ce1b28">
+            <img src="https://www.poc35.co/images/new-changelly-logo.png" width= "200" alt="Changelly" />
+          </a>
+          <h5>Don't Have Ethereum?<br>
+            Get Some from Changelly. (Pop Up Window Will Open) </h5>
+      </div>
+
+      <div class="medium--4 large--4">
+          <img src="images/CoinSwitch.jpg" width="200px">
+          <h5>Convert any Alt Coint to Ethereum and send it straight to your Nifty Wallet. Use <a href="https://coinswitch.co/?ref=5RIMSI9J6V">Coinswitch</a>.</h3>
+        
+      </div>
+      <div class="medium--4 large--4">
+        
+        <img src="images/nifty.png" width="275px">
+        <h5>We prefer <a href="https://trustwallet.com/">Trust Wallet </a> on Mobile and <a href="https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid?hl=en">Nifty Wallet </a>on Desktop. Please set these up accordingly.</h5>
+      
+      </div>
+   </div>   
+ </section> 
+ <hr class="double">
+ <section id="contentx">
+   <div class="grid-layout /*grid-layout--no-margin*/ /*grid-layout--fluid*/ /*grid-layout--no-gutters*/ colour--1"> 
+      <A NAME="swag"></A>
+      <h2>Support One-Eight by wearing Swag</h2>
+      <div class="medium--4 large--4">
+          <div id="slideshow">
+              <div>
+                <img src="images/yoone.jpg" width="220px">
+              </div>
+              <div>
+                <img src="images/reach.jpg" width="220px">
+              </div>
+              <div>
+                  <img src="images/coffee.jpg" width="220px">
+              </div>
+          </div>    
+      </div>
+
+      <div class="medium--4 large--4">
+        <p>Get your "be one-eight" t-Shirt. This link will open store.</p>
+        <button class="fill" onclick="getTee()">Buy NOW</button>
+      </div>
+
+      <div class="medium--4 large--4">
+          <p>We are teaming up with the Blazen Tokyo Store to sell T-shirts to fund this project. 50% of all T-shirt sales will be used to fund the contribution pot and to keep it active.
+            Think of it as a unique way to crowndfund. </p>
+           
+      </div>
+
+   </div>   
+ </section> 
+ <hr class="gradient">
+
+ <section id="contentq">
+    <A NAME="FAQ"></A>
+    <h2>FAQ</h2> 
+
+    <h4>How does the contribution fund work? </h4>
+    
+    <p>Contribution fund is a pool that collects all ETH played in the game. It than divides it out as daily rewards at 1.8% daily on the amount a player contributed. All transactions happen instantly on the blockchain.  From the moment you contribute the timer starts and you start earning interest immediately.</p> 
+    
+    <h4>What if there are no funds in the Contribution Fund? </h4>
+    
+    <p>If there are no funds in the contribution fund the game will pause until it is replenished.  One-eight has a sponsrship from Blazen Tokyo that will generate profit from all sales and cushion the contribution fund similar to a bank roll. </p>
+    
+   <h4> What makes this game any different than other similar lending platforms? </h4>
+    
+    <p>One-eight has a lower interest rate for more stable and realistic gains.  A higher percentage is more risky. The lower interest secures a longer and safe game. One-eight will go through the new year and beyond. <br>
+    With our unique sponsorship we can also assure you that we are in this for the very long foreseeable future.</p> 
+    <p>Our unique sponsorship is with Blazen Tokyo. 50% of profit from sales will be set-aside to back the smart contract similar to a bank roll. </p>
+    
+    <h4>What if the website goes down? </h4>
+   <p> You can interact with the smart contract always because it is forever on the blockchain. Please make a copy of the Smart Contract address as a back-up <i>(0x03b7945808Bb97307F31a311f2C9D3fce3d49a1c)</i>. You can continue interact and earn even if there is no website. </p>
+    
+    <h4>Are there any guarantees?</h4>
+    <p>There are no guarantees or promises. However, connect with our active community. Share the project or work with our sponsor. You get 2.5% by sharing your PAL. Be an active contributor and you will be successful. </p>
+    
+    <h4>What is the best strategy? </h4>
+    <p>The best strategy is to re-contribute your first 30days. Than after 30 days, withdraw your earnings till you have made back your ROI. Than from stage 3 start earning profit.  </p>
+    
+    <p><b>Example</b> <br>
+    This is an ideal recommended strategy. You are welcome to improve upon it. We also encourage you to share your strategy in the discord so all players can benefit.
+    </p>
+    <p>
+    <i>Stage 1 slow and steady </i><br>
+    First 30 days <br>
+    .05 to .077  <br>
+    .001386 
+    </p>
+    <p>
+    <i>Stage 2 </i><br>
+    Next 36 days <br>
+    Make back your RO1 
+  </p>
+  <p>
+    <i>Stage 3 in Profit </i><br>
+    Next 30 days <br>
+    Compound weekly <br>
+    Withdraw once a week 
+    </p>
+    <img class="bof" src="images/boflower.png" width="150px">
+ </section>
+ 
+
+
+<div id="footer">
+  <a href="https://discord.gg/jed5wbq"><img class="imgfoot" src="images/discord.png" width="35px"></a>
+  <p>Please Contact Us through Discord</p>
+<h5>Do not put in more ETH than you are willing to lose. This is a game and created for your entertainment. <br>
+  Are you not entertained? Please play safe and responsible and never put all your eggs in one basket.</h5>
+<h6>2018© - one-eight.io | All Rights Reserved </h6>
+</div>
+
+</html>
+  
+  
+	<!-- The Magic Stuff is here. -->
+		<!-- jQuery -->
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<!-- <script src="js/jquery-migrate.min.js"></script> -->
+		<!-- Bootstrap js -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- font awesome -->
+		<script src="js/fontawesome-all.min.js"></script>
+		<!-- jQuery Easing Plugin -->
+		<script src="js/easing-1.3.js"></script>
+		<!-- ImagesLoaded js -->
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<!-- Slick carousel js -->
+		<script src="js/slick.min.js"></script>
+		<!-- Magnific popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- BlockUI -->
+		<script src="js/jquery.blockUI.js"></script>
+		<!-- Custom js -->
+		<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- Custom js -->
+    <script src="js/slideshow.js"></script>
+
+		</body>
+	
+	<script src="js/one_eight.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	  function sent(){
+		swal("Success", "Your order has been submitted to the ETC blockchain, awaiting confirmation...", "success");
+    }
+    
+    function getstats() {
+    window.open("https://ethplorer.io/address/0x03b7945808bb97307f31a311f2c9d3fce3d49a1c#pageSize=25");
+}
+    function opencontract() {
+    window.open("https://etherscan.io/address/0x03b7945808bb97307f31a311f2c9d3fce3d49a1c#code");
+}
+
+ function getTee() {
+    window.open("https://teespring.com/new-be-one-eight-limited-v2");
+}
+
+  </script>	
+
+
+
+
+
+
+
+
+</body>
+
+</html>
