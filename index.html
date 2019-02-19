@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,9 +8,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="sloth.ico">
+    <link rel="icon" href="croc.ico">
 
-    <title>Sloth Farm</title>
+    <title>TRON Alligators Farm</title>
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,12 +19,16 @@
     <link href="jumbotron-narrow.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
 
-    <script src="TronWeb.js"></script>
+    <script src="/TronWeb.js"></script>
     <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-core.min.js"></script>
     <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-tron.min.js"></script>
-    <script src="main.js"></script>
-    <script src="interface.js"></script>
-    
+    <script src="/main.js"></script>
+    <script src="/interface.js"></script>
+
+  </head>
+
+  <body>
+
     <div id="myModal" class="modal">
 
       <!-- Modal content -->
@@ -31,12 +36,23 @@
         <!--<span class="close">&times;</span>-->
         <div id="modal-internal"></div>
       </div>
-      
-  </head>
-  <body>
-   <h2>TRON Sloth Farm</h2>  <h4>A clone with less fee, and more friends</h4>
 
-<div class="jumbotron">
+    </div>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="https://discord.gg/9jQ4Jg5" target="_blank"><b><em>Discord</em></b></a></li>
+            <li role="presentation"><a href="https://t.me/tronalligatorsfarm" target="_blank">Telegram</a></li>
+            <li role="presentation"><a href="https://tronscan.org/#/contract/TJV85ssYCJ19rnoTPn4BLqn6EfBPJ55KK1" target="_blank"><b><em>Contract</em></b></a></li>
+          </ul>
+        </nav>
+		<br>
+        <h2>TRON Alligators Farm</h2>  <h4>Crypto Idle Game.</h4>
+      </div>
+
+      <div class="jumbotron">
 
             <p class="lead"></p>
 
@@ -44,6 +60,7 @@
           <div class="container altcolor">
               <div class="row">
                 <div class="col-md-4">
+                    <img src="croc.png" width="150" alt="Crocs">
 
                     </div>
                 <div class="col-md-6">
@@ -70,6 +87,7 @@
               <br><br>
                 <div class="row">
                     <div class="col-md-4" >
+                        <img src="crocegg.png" width="50" alt="Egg">
                     </div>
 
                     <div class="col-md-4"><p><a class="btn btn-lg btn-success" onclick="hatchEggs1(displayTransactionMessage)" role="button">Hatch <span id="hatchcrocsquantity">?</span> Alligators</a></p></div>
@@ -91,6 +109,7 @@
           <div class="container altcolor">
               <div class="row">
                 <div class="col-md-4">
+                    <img src="tron.png" width="150" height="150" alt="Crocs">
 
                     </div>
                 <div class="col-md-7">
@@ -104,6 +123,32 @@
                   <div class="col-md-4">
 
                 </div>
+              </div>
+          </div>
+
+
+      </div>
+
+
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Earn TRON farming alligators!</h4>
+          <p>TRON Alligators Farm is the #1 alligators farming simulator and idle game on the blockchain. The more alligators you have, the more eggs they lay (each alligators lays at a rate of 1 per day). Hatch more alligators with your eggs to multiply your production, or cash them out for TRON!</p>
+
+
+          <h4>Powered by TronLink and Scatter</h4>
+          <p>This game requires, either <a href="https://get-scatter.com/">Scatter Wallet</a></p>
+          <p>either <a href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">TronLink</a> extension for Chrome.</p>
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Automated Market</h4>
+          <p>TRON Alligators Farm features a high tech automated market that lets you instantly buy or sell alligators eggs with a single transaction. Driven by supply and demand, the price automatically adjusts as players trade.</p>
+
+            <h4>Referrals</h4>
+          <p>Earn <b>20%</b> the number of all eggs hatched by anyone who starts playing using your link: <a onclick="copyRef()" id="playerreflink">?</span></p>
+
         <input style="display:none;" type="text" value="Hello Worldfdgerh" id="copytextthing">
         </div>
 
@@ -119,5 +164,3 @@
     </script>
   </body>
 </html>
-
-  </body>
