@@ -83,7 +83,6 @@ async function waitForTronWeb() {
             controlLoopFaster()
         }, 1000);
     }
-}
 
 
 function controlLoop() {
