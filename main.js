@@ -1,7 +1,5 @@
 var modal
 var modalContent
-var lastNumEggs = -1
-var lastNumCrocs = -1
 var lastSecondsUntilFull = 100
 lastHatchTime = 0
 
@@ -96,28 +94,6 @@ function controlLoopFaster() {
     setTimeout(controlLoopFaster, 30)
 }
 
-function refreshData() {
-    var sellsforexampledoc = document.getElementById('sellsforexample')
-    marketEggs(function(eggs) {
-        eggs = eggs / 10
-        calculateEggSell(eggs, function(sun) {
-            devFee(sun, function(fee) {
-                console.log('examplesellprice ', sun)
-                sellsforexampledoc.textContent = '(' + formatEggs(eggs) + ' eggs would sell for ' + formatTrxValue(tron.fromSun(sun)) + ')'
-            });
-        });
-    });
-    lastHatch(tron.defaultAddress['base58'], function(lh) {
-        lastHatchTime = lh
-    });
-    EGGS_TO_HATCH_1CROCS(function(eggs) {
-        eggstohatch1 = eggs
-    });
-    getMyEggs(function(eggs) {
-        if (lastNumEggs != eggs) {
-            lastNumEggs = eggs
-            lastUpdate = new Date().getTime()
-            updateEggNumber(eggs/eggstohatch1)
 
         }
         var timeuntilfulldoc = document.getElementById('timeuntilfull')
@@ -129,87 +105,6 @@ function refreshData() {
             timeuntilfulldoc.textContent = '?'
         }
     });
-    getMyCrocs(function(crocs) {
-        lastNumCrocs = crocs
-        var gfsdoc = document.getElementById('getfreecrocs')
-        if (crocs > 0) {
-            gfsdoc.style.display = "none"
-        } else {
-            gfsdoc.style.display = "inline-block"
-        }
-        var allnumcrocs = document.getElementsByClassName('numcrocs')
-        for (var i = 0; i < allnumcrocs.length; i++) {
-            if (allnumcrocs[i]) {
-                allnumcrocs[i].textContent = translateQuantity(crocs, 0)
-            }
-        }
-        var productiondoc = document.getElementById('production')
-        productiondoc.textContent = formatEggs(lastNumCrocs * 60 * 60)
-    });
-    updateBuyPrice()
-    updateSellPrice()
-    var prldoc = document.getElementById('playerreflink')
-    prldoc.textContent = window.location.origin + "?ref=" + tron.defaultAddress['base58']
-    var copyText = document.getElementById("copytextthing");
-    copyText.value = prldoc.textContent
-}
-
-function updateEggNumber(eggs) {
-    var hatchcrocsquantitydoc = document.getElementById('hatchcrocsquantity')
-    hatchcrocsquantitydoc.textContent = translateQuantity(eggs, 0)
-    var allnumeggs = document.getElementsByClassName('numeggs')
-    for (var i = 0; i < allnumeggs.length; i++) {
-        if (allnumeggs[i]) {
-            allnumeggs[i].textContent = translateQuantity(eggs)
-        }
-    }
-}
-
-function hatchEggs1() {
-    ref = getQueryVariable('ref')
-    if (!tron.isAddress(ref)) {
-          ref = tron.defaultAddress['base58']
-    }
-    console.log('hatcheggs ref ', ref)
-    hatchEggs(ref, displayTransactionMessage())
-}
-
-function liveUpdateEggs() {
-    if (lastSecondsUntilFull > 1 && lastNumEggs >= 0 && lastNumCrocs > 0 && eggstohatch1 > 0) {
-        currentTime = new Date().getTime()
-        if (currentTime / 1000 - lastHatchTime > eggstohatch1) {
-            return;
-        }
-        difference = (currentTime - lastUpdate) / 1000
-        additionalEggs = Math.floor(difference * lastNumCrocs)
-        updateEggNumber((lastNumEggs + additionalEggs)/eggstohatch1)
-    }
-}
-
-function updateSellPrice() {
-    var eggstoselldoc = document.getElementById('sellprice')
-    //eggstoselldoc.textContent='?'
-    getMyEggs(function(eggs) {
-        calculateEggSell(eggs, function(sun) {
-            devFee(sun, function(fee) {
-                console.log('sellprice ', sun)
-                eggstoselldoc.textContent =  formatTrxValue(tron.fromSun(sun - fee))
-            });
-        });
-    });
-}
-
-function updateBuyPrice() {
-    var eggstobuydoc = document.getElementById('eggstobuy')
-    //eggstobuydoc.textContent='?'
-    var trxtospenddoc = document.getElementById('ethtospend')
-    suntospend = tron.toSun(trxtospenddoc.value)
-    calculateEggBuySimple(suntospend, function(eggs) {
-        devFee(eggs, function(fee) {
-            eggstobuydoc.textContent = formatEggs(eggs - fee)
-        });
-    });
-}
 
 function investETH() {
     var trxspenddoc = document.getElementById('ethtospend')
@@ -219,9 +114,6 @@ function investETH() {
     });
 }
 
-function formatEggs(eggs) {
-    return translateQuantity(eggs / eggstohatch1)
-}
 
 function translateQuantity(quantity, precision) {
     quantity = Number(quantity)
