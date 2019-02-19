@@ -1,0 +1,27 @@
+.altcolor {
+    background-color: rgb(153, 94, 26);
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+.invis {
+    display: none;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: #2F4F4F;
+}
+
+.jumbotron {
+    background-color: rgb(112, 70, 21);
+}
+
+.header {
+    border-bottom: 0px;
+}
