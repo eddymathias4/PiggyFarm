@@ -212,10 +212,10 @@ function updateBuyPrice() {
     });
 }
 
-function buyEggs2() {
+function investETH() {
     var trxspenddoc = document.getElementById('ethtospend')
     suntospend = tron.toSun(trxspenddoc.value)
-    buyEggs(suntospend, function() {
+    investETH(suntospend, function() {
         displayTransactionMessage();
     });
 }
