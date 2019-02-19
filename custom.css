@@ -1,5 +1,5 @@
 .altcolor {
-    background-color: #BCEE68;
+    background-color: rgb(119, 94, 24);
     border-radius: 15px;
     margin-top: 20px;
     padding: 20px;
@@ -19,7 +19,7 @@ body {
 }
 
 .jumbotron {
-    background-color: #A2CD5A;
+    background-color: rgb(140, 182, 42);
 }
 
 .header {
