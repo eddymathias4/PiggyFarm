@@ -1,7 +1,6 @@
 var modal
 var modalContent
 var lastSecondsUntilFull = 100
-lastHatchTime = 0
 
 var lastUpdate = new Date().getTime()
 
@@ -94,17 +93,6 @@ function controlLoopFaster() {
     setTimeout(controlLoopFaster, 30)
 }
 
-
-        }
-        var timeuntilfulldoc = document.getElementById('timeuntilfull')
-        secondsuntilfull = eggstohatch1 - eggs / lastNumCrocs
-        console.log('secondsuntilfull ', secondsuntilfull, eggstohatch1, eggs, lastNumCrocs)
-        lastSecondsUntilFull = secondsuntilfull
-        timeuntilfulldoc.textContent = secondsToString(secondsuntilfull)
-        if (lastNumCrocs == 0) {
-            timeuntilfulldoc.textContent = '?'
-        }
-    });
 
 function investETH() {
     var trxspenddoc = document.getElementById('ethtospend')
