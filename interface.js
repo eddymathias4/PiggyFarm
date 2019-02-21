@@ -9,8 +9,8 @@ function buyEggs(trx, callback) {
 }
 
 
-function getFreeCrocs(callback) {
-    myContract.getFreeCrocs().send().then(result => {
+function getFreeDragon(callback) {
+    myContract.getFreeDragon().send().then(result => {
         callback();
     }).catch((err) => {
         console.log(err)
@@ -69,8 +69,8 @@ function claimedEggs(callback) {
 }
 
 
-function EGGS_TO_HATCH_1CROCS(callback) {
-    myContract.EGGS_TO_HATCH_1CROCS().call().then(result => {
+function EGGS_TO_HATCH_1Dragon(callback) {
+    myContract.EGGS_TO_HATCH_1Dragon().call().then(result => {
         callback(tron.toDecimal(result));
     }).catch((err) => {
         console.log(err)
@@ -111,8 +111,8 @@ function getMyEggs(callback) {
 }
 
 
-function getMyCrocs(callback) {
-    myContract.getMyCrocs().call().then(result => {
+function getMyDragon(callback) {
+    myContract.getMyDragon().call().then(result => {
         if (result == '0x') {
             result = 0;
         }
