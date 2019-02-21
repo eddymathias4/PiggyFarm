@@ -10,7 +10,7 @@ var lastUpdate = new Date().getTime()
 var tron;
 var scatter;
 var myContract;
-var contractAddress = "TJV85ssYCJ19rnoTPn4BLqn6EfBPJ55KK1";
+var contractAddress = "TZJo9ztjkxxx5SXDaniVXic4dvfuC2dEvQ";
 
 function main() {
     // console.log('test')
