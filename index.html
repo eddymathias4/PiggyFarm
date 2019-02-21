@@ -8,22 +8,22 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="sloth.ico">
+    <link rel="icon" href="croc.ico">
 
-    <title>Sloth Farm</title>
+    <title>TRON Alligators Farm</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="jumbotron-narrow.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
 
-    <script src="TronWeb.js"></script>
+    <script src="/TronWeb.js"></script>
     <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-core.min.js"></script>
     <script src="https://cdn.scattercdn.com/file/scatter-cdn/js/latest/scatterjs-plugin-tron.min.js"></script>
-    <script src="main.js"></script>
-    <script src="interface.js"></script>
+    <script src="/main.js"></script>
+    <script src="/interface.js"></script>
 
   </head>
 
@@ -43,12 +43,13 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="https://discord.gg/2CZGY9Z" target="_blank"><b><em>Discord</em></b></a></li>
-            <li role="presentation"><a href="https://tronscan.org/#/contract/TRKxLdgpskhgCtaARgFgYbEA5BusBAC9Rq" target="_blank"><b><em>Contract</em></b></a></li>
+            <li role="presentation"><a href="https://discord.gg/9jQ4Jg5" target="_blank"><b><em>Discord</em></b></a></li>
+            <li role="presentation"><a href="https://t.me/tronalligatorsfarm" target="_blank">Telegram</a></li>
+            <li role="presentation"><a href="https://tronscan.org/#/contract/TJV85ssYCJ19rnoTPn4BLqn6EfBPJ55KK1" target="_blank"><b><em>Contract</em></b></a></li>
           </ul>
         </nav>
 		<br>
-        <h2>Tron sloth Farm</h2>  <h4>Buy, Breed and Sell sloths</h4>
+        <h2>TRON Alligators Farm</h2>  <h4>Crypto Idle Game.</h4>
       </div>
 
       <div class="jumbotron">
@@ -59,17 +60,17 @@
           <div class="container altcolor">
               <div class="row">
                 <div class="col-md-4">
-                    <img src="sloth.png" width="150" alt="sloth">
+                    <img src="croc.png" width="150" alt="Crocs">
 
                     </div>
                 <div class="col-md-6">
-                    <h2><span class="numcrocs">?</span> Sloths</h2>
+                    <h2><span class="numcrocs">?</span> Alligators</h2>
                     <br>
-                    <h2>Producing <span id="production">?</span> Unborn Sloths Per Hour</h2>
+                    <h2>Producing <span id="production">?</span> eggs per hour</h2>
                 </div>
               </div>
               <div class="row">
-                <p><a id="getfreeCrocs" class="btn btn-lg btn-success invis" onclick="getFreeCrocs(displayTransactionMessage)" role="button">Get a FREE Sloth</a></p>
+                <p><a id="getfreecrocs" class="btn btn-lg btn-success invis" onclick="getFreeCrocs(displayTransactionMessage)" role="button">Get 10 Free Alligators!</a></p>
               </div>
           </div>
           <div class="container altcolor">
@@ -77,18 +78,19 @@
                     <div class="col-md-4" >
                     </div>
                     <div class="col-md-8">
-                    <h2><span class="numeggs">0</span> Unborn Sloths
+                    <h2><span class="numeggs">0</span> Eggs
                     <br>
-                    (<span id="timeuntilfull">?</span> until orphanage is full)
+                    (<span id="timeuntilfull">?</span> until hatchery full)
                     </h2>
                     </div>
               </div>
               <br><br>
                 <div class="row">
                     <div class="col-md-4" >
-                        <img src="slothunborn.png" width="150" height="100" alt=" slothunborn">
+                        <img src="crocegg.png" width="50" alt="Egg">
                     </div>
-                    <div class="col-md-4"><p><a class="btn btn-lg btn-success" onclick="hatchEggs1(displayTransactionMessage)" role="button">Breed <span id="hatchcrocsquantity">?</span> Sloths</a></p></div>
+
+                    <div class="col-md-4"><p><a class="btn btn-lg btn-success" onclick="hatchEggs1(displayTransactionMessage)" role="button">Hatch <span id="hatchcrocsquantity">?</span> Alligators</a></p></div>
               </div>
               <div class="row">
                   <div class="col-md-4"></div>
@@ -100,19 +102,19 @@
                     <div class="col-md-4" >
                     </div>
                     <div class="col-md-8">
-                        <p><span id="sellsforexample">0 sloths would sell for 0.054</span></p>
+                        <p><span id="sellsforexample">0 eggs would sell for 0.054</span></p>
                     </div>
               </div>
           </div>
           <div class="container altcolor">
               <div class="row">
                 <div class="col-md-4">
-                    <img src="trx.png" width="150" height="150" alt="trx">
+                    <img src="tron.png" width="150" height="150" alt="Crocs">
 
                     </div>
                 <div class="col-md-7">
                     <a class="btn btn-lg btn-info" onclick="buyEggs2()"  role="button">Buy</a>
-                    <h2><span id="eggstobuy">?</span>Sloths For </h2><input class="form-control" type="number" style="width: 130px" onchange="updateBuyPrice()" step="0.01" value="0.01" id="ethtospend">
+                    <h2><span id="eggstobuy">?</span> eggs for </h2><input class="form-control" type="number" style="width: 130px" onchange="updateBuyPrice()" step="0.01" value="0.01" id="ethtospend">
                 </div>
 
               </div>
@@ -131,8 +133,8 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Be the parent of the sloths or sell them.</h4>
-          <p>TRON Sloth Farm is the #1 Sloth farming simulator and idle game on the blockchain. The more Sloths you have, the more Breeding they do (each Sloths breeds at a rate of once per day). Breed more Sloths with your Sloths to multiply your production, or cash them out for TRON!</p>
+          <h4>Earn TRON farming alligators!</h4>
+          <p>TRON Alligators Farm is the #1 alligators farming simulator and idle game on the blockchain. The more alligators you have, the more eggs they lay (each alligators lays at a rate of 1 per day). Hatch more alligators with your eggs to multiply your production, or cash them out for TRON!</p>
 
 
           <h4>Powered by TronLink and Scatter</h4>
@@ -142,7 +144,7 @@
 
         <div class="col-lg-6">
             <h4>Automated Market</h4>
-          <p>Buy, Breed and sell sloths just like home</p>
+          <p>TRON Alligators Farm features a high tech automated market that lets you instantly buy or sell alligators eggs with a single transaction. Driven by supply and demand, the price automatically adjusts as players trade.</p>
 
             <h4>Referrals</h4>
           <p>Earn <b>20%</b> the number of all eggs hatched by anyone who starts playing using your link: <a onclick="copyRef()" id="playerreflink">?</span></p>
