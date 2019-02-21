@@ -1,7 +1,7 @@
 var modal
 var modalContent
 var lastNumEggs = -1
-var lastNumcrocs = -1
+var lastNumCrocs = -1
 var lastSecondsUntilFull = 100
 lastHatchTime = 0
 var eggstohatch1 = 864
