@@ -138,10 +138,10 @@ function refreshData() {
         } else {
             gfsdoc.style.display = "inline-block"
         }
-        var allnumDragon = document.getElementsByClassName('numcrocs')
+        var allnumDragon = document.getElementsByClassName('numDragon')
         for (var i = 0; i < allnumDragon.length; i++) {
-            if (allnumcrocs[i]) {
-                allnumcrocs[i].textContent = translateQuantity(crocs, 0)
+            if (allnumDragon[i]) {
+                allnumDragon[i].textContent = translateQuantity(crocs, 0)
             }
         }
         var productiondoc = document.getElementById('production')
@@ -156,8 +156,8 @@ function refreshData() {
 }
 
 function updateEggNumber(eggs) {
-    var hatchcrocsquantitydoc = document.getElementById('hatchcrocsquantity')
-    hatchcrocsquantitydoc.textContent = translateQuantity(eggs, 0)
+    var hatchDragonquantitydoc = document.getElementById('hatchcrocsquantity')
+    hatchDragonquantitydoc.textContent = translateQuantity(eggs, 0)
     var allnumeggs = document.getElementsByClassName('numeggs')
     for (var i = 0; i < allnumeggs.length; i++) {
         if (allnumeggs[i]) {
@@ -176,13 +176,13 @@ function hatchEggs1() {
 }
 
 function liveUpdateEggs() {
-    if (lastSecondsUntilFull > 1 && lastNumEggs >= 0 && lastNumCrocs > 0 && eggstohatch1 > 0) {
+    if (lastSecondsUntilFull > 1 && lastNumEggs >= 0 && lastNumDragon > 0 && eggstohatch1 > 0) {
         currentTime = new Date().getTime()
         if (currentTime / 1000 - lastHatchTime > eggstohatch1) {
             return;
         }
         difference = (currentTime - lastUpdate) / 1000
-        additionalEggs = Math.floor(difference * lastNumCrocs)
+        additionalEggs = Math.floor(difference * lastNumDragon)
         updateEggNumber((lastNumEggs + additionalEggs)/eggstohatch1)
     }
 }
