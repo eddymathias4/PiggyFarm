@@ -10,7 +10,7 @@ var lastUpdate = new Date().getTime()
 var tron;
 var scatter;
 var myContract;
-var contractAddress = "THvSTeAsVSYdjw8b3QqqLqABJafdPQ4tWn";
+var contractAddress = "TJV85ssYCJ19rnoTPn4BLqn6EfBPJ55KK1";
 
 function main() {
     // console.log('test')
@@ -111,7 +111,7 @@ function refreshData() {
     lastHatch(tron.defaultAddress['base58'], function(lh) {
         lastHatchTime = lh
     });
-    EGGS_TO_HATCH_1crocs(function(eggs) {
+    EGGS_TO_HATCH_1CROCS(function(eggs) {
         eggstohatch1 = eggs
     });
     getMyEggs(function(eggs) {
@@ -122,16 +122,16 @@ function refreshData() {
 
         }
         var timeuntilfulldoc = document.getElementById('timeuntilfull')
-        secondsuntilfull = eggstohatch1 - eggs / lastNumcrocs
-        console.log('secondsuntilfull ', secondsuntilfull, eggstohatch1, eggs, lastNumcrocs)
+        secondsuntilfull = eggstohatch1 - eggs / lastNumCrocs
+        console.log('secondsuntilfull ', secondsuntilfull, eggstohatch1, eggs, lastNumCrocs)
         lastSecondsUntilFull = secondsuntilfull
         timeuntilfulldoc.textContent = secondsToString(secondsuntilfull)
-        if (lastNumcrocs == 0) {
+        if (lastNumCrocs == 0) {
             timeuntilfulldoc.textContent = '?'
         }
     });
-    getMycrocs(function(crocs) {
-        lastNumcrocs = crocs
+    getMyCrocs(function(crocs) {
+        lastNumCrocs = crocs
         var gfsdoc = document.getElementById('getfreecrocs')
         if (crocs > 0) {
             gfsdoc.style.display = "none"
@@ -145,7 +145,7 @@ function refreshData() {
             }
         }
         var productiondoc = document.getElementById('production')
-        productiondoc.textContent = formatEggs(lastNumcrocs * 60 * 60)
+        productiondoc.textContent = formatEggs(lastNumCrocs * 60 * 60)
     });
     updateBuyPrice()
     updateSellPrice()
@@ -176,13 +176,13 @@ function hatchEggs1() {
 }
 
 function liveUpdateEggs() {
-    if (lastSecondsUntilFull > 1 && lastNumEggs >= 0 && lastNumcrocs > 0 && eggstohatch1 > 0) {
+    if (lastSecondsUntilFull > 1 && lastNumEggs >= 0 && lastNumCrocs > 0 && eggstohatch1 > 0) {
         currentTime = new Date().getTime()
         if (currentTime / 1000 - lastHatchTime > eggstohatch1) {
             return;
         }
         difference = (currentTime - lastUpdate) / 1000
-        additionalEggs = Math.floor(difference * lastNumcrocs)
+        additionalEggs = Math.floor(difference * lastNumCrocs)
         updateEggNumber((lastNumEggs + additionalEggs)/eggstohatch1)
     }
 }
