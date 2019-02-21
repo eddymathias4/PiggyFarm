@@ -1,7 +1,7 @@
 var modal
 var modalContent
 var lastNumEggs = -1
-var lastNumCrocs = -1
+var lastNumDragon = -1
 var lastSecondsUntilFull = 100
 lastHatchTime = 0
 var eggstohatch1 = 864
@@ -10,7 +10,7 @@ var lastUpdate = new Date().getTime()
 var tron;
 var scatter;
 var myContract;
-var contractAddress = "TJV85ssYCJ19rnoTPn4BLqn6EfBPJ55KK1";
+var contractAddress = "TRKxLdgpskhgCtaARgFgYbEA5BusBAC9Rq";
 
 function main() {
     // console.log('test')
@@ -111,7 +111,7 @@ function refreshData() {
     lastHatch(tron.defaultAddress['base58'], function(lh) {
         lastHatchTime = lh
     });
-    EGGS_TO_HATCH_1CROCS(function(eggs) {
+    EGGS_TO_HATCH_1Dragon(function(eggs) {
         eggstohatch1 = eggs
     });
     getMyEggs(function(eggs) {
@@ -122,30 +122,30 @@ function refreshData() {
 
         }
         var timeuntilfulldoc = document.getElementById('timeuntilfull')
-        secondsuntilfull = eggstohatch1 - eggs / lastNumCrocs
-        console.log('secondsuntilfull ', secondsuntilfull, eggstohatch1, eggs, lastNumCrocs)
+        secondsuntilfull = eggstohatch1 - eggs / lastNumDragon
+        console.log('secondsuntilfull ', secondsuntilfull, eggstohatch1, eggs, lastNumDragon)
         lastSecondsUntilFull = secondsuntilfull
         timeuntilfulldoc.textContent = secondsToString(secondsuntilfull)
-        if (lastNumCrocs == 0) {
+        if (lastNumDragon == 0) {
             timeuntilfulldoc.textContent = '?'
         }
     });
-    getMyCrocs(function(crocs) {
-        lastNumCrocs = crocs
-        var gfsdoc = document.getElementById('getfreecrocs')
-        if (crocs > 0) {
+    getMyDragon(function(crocs) {
+        lastNumDragon = Dragon
+        var gfsdoc = document.getElementById('getfreeDragon')
+        if (Dragon > 0) {
             gfsdoc.style.display = "none"
         } else {
             gfsdoc.style.display = "inline-block"
         }
-        var allnumcrocs = document.getElementsByClassName('numcrocs')
-        for (var i = 0; i < allnumcrocs.length; i++) {
+        var allnumDragon = document.getElementsByClassName('numcrocs')
+        for (var i = 0; i < allnumDragon.length; i++) {
             if (allnumcrocs[i]) {
                 allnumcrocs[i].textContent = translateQuantity(crocs, 0)
             }
         }
         var productiondoc = document.getElementById('production')
-        productiondoc.textContent = formatEggs(lastNumCrocs * 60 * 60)
+        productiondoc.textContent = formatEggs(lastNumDragon * 60 * 60)
     });
     updateBuyPrice()
     updateSellPrice()
